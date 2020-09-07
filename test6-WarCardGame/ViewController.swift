@@ -1,4 +1,3 @@
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -17,8 +16,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    
+    // logic start
+    
+    
+    @IBAction func dealTaped(_ sender: Any) {
+        deal()
+        check()
+        updateUIScores()
+    }
+    
     
     fileprivate func deal() {
         let leftNumber = Int.random(in: 2...14)
@@ -38,32 +47,26 @@ class ViewController: UIViewController {
     fileprivate func check() {
         if leftScore>=10 || rightScore>=10 {
             let msg = leftScore >= 10
-                ? "U Are the Winner!": "U R Looooooser..."
-            print(msg)
-            
-            leftScore = 0
-            rightScore = 0
-            
-            
+                ? "U R the Winner!": "U R Loooooser..."
+
             let alert = UIAlertController(title: "Hey!", message: msg, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in self.reset()}))
             self.present(alert, animated: true)
         }
     }
     
-    fileprivate func updateUIScores() {
-        leftScoreLabel.text = String(leftScore)
-        rightScoreLabel.text=String(rightScore)
-    }
-    
-    @IBAction func dealTaped(_ sender: Any) {
-        print("dealTaped")
-        deal()
-        check()
+    fileprivate func reset() {
+        leftScore = 0
+        rightScore = 0
+        leftCardView.image = UIImage(named: "back")
+        rightCardView.image = UIImage(named: "back")
         updateUIScores()
     }
     
-    
+    fileprivate func updateUIScores() {
+        leftScoreLabel.text = String(leftScore)
+        rightScoreLabel.text = String(rightScore)
+    }
     
 }
 

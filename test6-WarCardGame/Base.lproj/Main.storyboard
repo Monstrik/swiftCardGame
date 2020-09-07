@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test6_WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="eS0-AK-gP9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Kb2-LM-1o4">
-                                <rect key="frame" x="126.66666666666669" y="54" width="122" height="67"/>
+                                <rect key="frame" x="307" y="10" width="122" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="488" id="On9-NR-nVW"/>
-                                    <constraint firstAttribute="height" constant="268" id="fv5-pN-ggJ"/>
+                                    <constraint firstAttribute="height" constant="219" id="fv5-pN-ggJ"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -38,22 +39,43 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ln2-W5-9Aw" userLabel="CardHolder">
-                                <rect key="frame" x="52.666666666666657" y="310.66666666666669" width="270" height="271.00000000000006"/>
+                                <rect key="frame" x="233" y="121" width="270" height="252"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QFO-F8-KqA">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="OtI-pH-rya">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="OtI-pH-rya">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="N8X-iI-fpL"/>
+                                                    <constraint firstAttribute="height" constant="120" id="s6Z-Nd-jBq"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="N8X-iI-fpL"/>
+                                                        <exclude reference="s6Z-Nd-jBq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="N8X-iI-fpL"/>
+                                                        <include reference="s6Z-Nd-jBq"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card11" translatesAutoresizingMaskIntoConstraints="NO" id="3Rw-5L-c6p">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="3Rw-5L-c6p">
                                                 <rect key="frame" x="150" y="0.0" width="120" height="170"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-Rd-haM">
-                                        <rect key="frame" x="94" y="239.99999999999994" width="81.666666666666686" height="31"/>
-                                        <state key="normal" image="dealbutton"/>
+                                        <rect key="frame" x="53" y="190" width="164" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="ZTH-hX-GES"/>
+                                            <constraint firstAttribute="width" constant="164" id="fxh-wc-IdP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" backgroundImage="dealbutton"/>
                                         <connections>
                                             <action selector="dealTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7O-rG-Msp"/>
                                         </connections>
@@ -63,7 +85,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" spacing="70"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-K6-w2d" userLabel="PlayerScore">
-                                <rect key="frame" x="10" y="709.66666666666663" width="47" height="68.333333333333371"/>
+                                <rect key="frame" x="10" y="345.66666666666669" width="47" height="68.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1K-b2-QjH">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="20.333333333333332"/>
@@ -72,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcN-pQ-Y1e">
-                                        <rect key="frame" x="11.33333333333333" y="20.333333333333371" width="24.666666666666671" height="48"/>
+                                        <rect key="frame" x="11.33333333333333" y="20.333333333333314" width="24.666666666666671" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -80,16 +102,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OxV-iN-tee" userLabel="CpuScore">
-                                <rect key="frame" x="320.33333333333326" y="709.66666666666663" width="44.666666666666686" height="68.333333333333371"/>
+                                <rect key="frame" x="681.33333333333337" y="345.66666666666669" width="44.666666666666629" height="68.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvq-Qh-2X7">
-                                        <rect key="frame" x="5.3333333333333712" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
+                                        <rect key="frame" x="5.3333333333332575" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz4-1o-Xyu">
-                                        <rect key="frame" x="10.000000000000002" y="20.333333333333371" width="24.666666666666671" height="48"/>
+                                        <rect key="frame" x="10.000000000000002" y="20.333333333333314" width="24.666666666666671" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -133,8 +155,7 @@
     </scenes>
     <resources>
         <image name="Background" width="414" height="896"/>
-        <image name="card10" width="120" height="170"/>
-        <image name="card11" width="120" height="170"/>
+        <image name="back" width="120" height="170"/>
         <image name="dealbutton" width="81.666664123535156" height="31"/>
         <image name="logo" width="122" height="67"/>
     </resources>
